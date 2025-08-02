@@ -1,7 +1,7 @@
 module "vpc" {
-  source    = "./vpc"
-  vpc_cidr  = "10.0.0.0/16"
-  vpc_name  = "akshay-vpc"
+  source   = "./vpc"
+  vpc_cidr = "10.0.0.0/16"
+  vpc_name = "akshay-vpc"
 }
 
 module "subnets" {
