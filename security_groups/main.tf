@@ -1,4 +1,4 @@
-resource "aws_security_group" "cluster" {
+resource "aws_security_group" "cluster_sg" {
   vpc_id = var.vpc_id
 
   egress {
@@ -13,7 +13,7 @@ resource "aws_security_group" "cluster" {
   }
 }
 
-resource "aws_security_group" "node" {
+resource "aws_security_group" "node_sg" {
   vpc_id = var.vpc_id
 
   ingress {

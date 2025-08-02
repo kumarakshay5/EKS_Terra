@@ -1,21 +1,16 @@
-variable "vpc_id" {
-  type        = string
-  description = "VPC ID for EKS cluster"
-}
-
 variable "subnet_ids" {
   type        = list(string)
-  description = "Subnets to associate with EKS"
+  description = "Subnets for the EKS cluster"
 }
 
 variable "cluster_sg_id" {
   type        = string
-  description = "Security Group ID for EKS control plane"
+  description = "Cluster security group ID"
 }
 
 variable "node_sg_id" {
   type        = string
-  description = "Security Group ID for worker nodes"
+  description = "Node security group ID"
 }
 
 variable "cluster_role_arn" {
@@ -30,5 +25,5 @@ variable "node_group_role_arn" {
 
 variable "ssh_key_name" {
   type        = string
-  description = "EC2 Key pair name for SSH access"
+  description = "SSH key name for worker nodes"
 }

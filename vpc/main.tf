@@ -1,8 +1,8 @@
 resource "aws_vpc" "this" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc_cidr
 
   tags = {
-    Name = "akshay-vpc"
+    Name = var.vpc_name
   }
 }
 
@@ -10,7 +10,7 @@ resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    Name = "akshay-igw"
+    Name = "${var.vpc_name}-igw"
   }
 }
 
@@ -23,6 +23,6 @@ resource "aws_route_table" "this" {
   }
 
   tags = {
-    Name = "akshay-route-table"
+    Name = "${var.vpc_name}-route-table"
   }
 }
