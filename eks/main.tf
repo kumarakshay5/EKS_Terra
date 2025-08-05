@@ -16,11 +16,11 @@ resource "aws_eks_node_group" "this" {
 
   scaling_config {
     desired_size = 2
-    max_size     = 2
-    min_size     = 2
+    min_size     = 3
+    max_size     = 4
   }
 
-  instance_types = ["t3.medium"]
+  instance_types = ["t3.small"]
 
   remote_access {
     ec2_ssh_key               = var.ssh_key_name
