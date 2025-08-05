@@ -9,7 +9,7 @@ module "subnets" {
   vpc_id             = module.vpc.vpc_id
   route_table_id     = module.vpc.route_table_id
   subnet_cidrs       = ["10.0.1.0/24", "10.0.2.0/24"]
-  azs                = ["us-east-1a", "us-east-1b"]
+  azs                = ["ap-south-1a", "ap-south-1b"]
   subnet_name_prefix = "akshay-subnet"
 }
 
