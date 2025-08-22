@@ -43,7 +43,7 @@ variable "node_group_name" {
 variable "instance_types" {
   description = "EC2 instance types for worker nodes"
   type        = list(string)
-  default     = ["t3.medium"]
+  default     = ["t3a.medium"]
 }
 
 variable "desired_size" {
