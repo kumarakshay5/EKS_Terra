@@ -1,4 +1,4 @@
-name: Terraform EKS Pipeline
+name: Terraform EKS Pipeline 
 
 on:
   push:
